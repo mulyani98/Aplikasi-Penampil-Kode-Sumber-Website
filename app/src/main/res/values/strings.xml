@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GetSourceWebsite</string>
+    <string-array name="jenis">
+        <item>http://</item>
+        <item>https://</item>
+    </string-array>
+</resources>
