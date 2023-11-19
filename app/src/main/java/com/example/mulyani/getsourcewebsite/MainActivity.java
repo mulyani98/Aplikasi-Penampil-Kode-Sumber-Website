@@ -1,9 +1,6 @@
 package com.example.mulyani.getsourcewebsite;
 
 
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -12,6 +9,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>{
 
@@ -64,14 +65,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     @Override
-    public void onLoadFinished(android.support.v4.content.Loader<String> loader, String data) {
+    public void onLoadFinished(Loader<String> loader, String data) {
         txtview.setText(data);
         progb.setVisibility(View.GONE);
         txtview.setVisibility(View.VISIBLE);
     }
 
     @Override
-    public void onLoaderReset(android.support.v4.content.Loader<String> loader) {
+    public void onLoaderReset(Loader<String> loader) {
 
     }
 }
